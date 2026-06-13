@@ -15,7 +15,7 @@ export default function TodayTab({ goal, log, setLog, onNeedMore }) {
   const entries  = log?.entries || [];
   const consumed = entries.reduce((a, b) => a + b.calories, 0);
   const remaining = goal - consumed;
-  const pct = Math.min(consumed / goal, 1);
+  
 
   const statusColor = remaining > 300 ? "text-red-400" : remaining > 0 ? "text-yellow-400" : "text-green-400";
   const statusMsg   = remaining > 400 ? `Need ${remaining} more kcal 🍽️`
